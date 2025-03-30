@@ -61,11 +61,11 @@ html::-webkit-scrollbar-thumb{
 
 .logo{
     cursor: pointer;
-    transition: 1 ease-in-out;
+    transition: transform 0.3s ease;
     
 }
 
-.logo>img{
+.logo img{
     width: 50%;
 }
 
@@ -79,7 +79,7 @@ html::-webkit-scrollbar-thumb{
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
 }
 
@@ -95,44 +95,36 @@ html::-webkit-scrollbar-thumb{
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-@media(max-width:995px){
-    #menu-icon{
-        display: block;
+@media (max-width: 995px) {
+    .menu {
+        width: 70%; /* Mais espaço para itens */
     }
+    
+    .menu a {
+        font-size: 2.2rem;
+        margin: 2.5rem 0;
+    }
+}
 
-    .menu{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid var(--main-color);
-        border-bottom: 3px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem 3%;
-        background-color: var(--second-bg-color);
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-        background: rgba(22, 22, 22, 0.8); /* --second-bg-color com transparência */
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        text-align: center;
+        padding-top: 300px;
     }
-
-    .menu.active{
-        display: block;
+    
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
     }
-    .menu a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    .menu a:hover,
-    .menu a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid var(--main-color);
-        font-size: 2rem;
+    
+    .social-icon {
+        justify-content: center;
     }
 }
 
@@ -161,6 +153,7 @@ section{
 
 .home-img{
     border-radius: 50%;
+    text-align: center;
 }
 .home-img img{
     position: relative;
@@ -278,6 +271,19 @@ span{
     line-height: 1.2; /* Espaçamento entre linhas */
 }
 
+@media (max-width: 992px) {
+    .about .container-sobre {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+    
+    .about .container-sobre p {
+        max-width: 95%;
+        font-size: 1.8rem;
+    }
+}
+
 /* Projects section */
 
 .projects {
@@ -345,15 +351,14 @@ span{
     margin-top: 15px;
 }
 
-/* Media Query para 1 card em telas menores */
 @media (max-width: 768px) {
     .projects-container {
-        grid-template-columns: (1,1fr); /* 1 coluna */
-        padding: 0 10px; /* Padding menor em mobile */
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
     }
-
-    .projects-info {
-        padding: 1.5rem; /* Ajuste para telas pequenas */
+    
+    .projects-box {
+        min-height: 300px;
     }
 }
 
@@ -437,12 +442,7 @@ span{
         grid-template-columns: repeat(3,1fr);
         display: grid;
     }
-    /* .skills .container .row{
-        grid-template-columns: repeat(2,1fr);
-        margin: 1rem;
-        padding: 2rem 0.2rem 2rem 0.2rem;
-        gap: 1rem;
-    }*/
+    
     .skills .container{
         margin-top: 5px;
         width: 100%;
@@ -462,7 +462,6 @@ span{
         width: 100%;
     } 
 } *
-
 
 
 /* Contatos */
@@ -540,27 +539,39 @@ span{
         text-align: center;
     }
    
-    @media(max-width:1285px){
-        html{
-            font-size: 55%;
+    @media (max-width: 600px) {
+        .contatos form .input-box {
+            flex-direction: column;
         }
-        .projects-container{
-            padding-bottom: 7rem;
-            grid-template-columns: repeat(2,1fr);
-            margin: 0 5rem;
-        }
-    }
-    @media(max-width:991px){
-        .header{
-            padding: 2rem 3%;
-        }
-        section{
-            padding: 10rem 3% 2rem;
-        }
-        .services{
-            padding-bottom: 7rem;
-        }
-        .footer{
-        padding: 2rem 3%;
+        
+        .contatos form .input-box input {
+            width: 100%;
         }
     }
+
+    /* Reset completo para mobile */
+@media (max-width: 400px) {
+    * {
+        margin: 0 !important;
+        padding: 0 5px !important;
+        float: none !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    
+    body {
+        position: static !important;
+        overflow-x: hidden !important;
+    }
+    
+    .header, section, footer {
+        position: relative !important;
+        left: 0 !important;
+        right: auto !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+}
+    
