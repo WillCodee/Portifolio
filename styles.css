@@ -260,7 +260,6 @@ html::-webkit-scrollbar-thumb{
     }
 }
 
-/*  */
 
 section{
     min-height: 100vh;
@@ -405,18 +404,6 @@ span{
     line-height: 1.2; /* Espaçamento entre linhas */
 }
 
-@media (max-width: 992px) {
-    .about .container-sobre {
-        width: 90%;
-        height: auto;
-        padding: 2rem;
-    }
-    
-    .about .container-sobre p {
-        max-width: 95%;
-        font-size: 1.8rem;
-    }
-}
 
 /* Projects section */
 
@@ -483,17 +470,6 @@ span{
     font-size: 15px;
     border-radius: 50px;
     margin-top: 15px;
-}
-
-@media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-        margin: 0 2rem;
-    }
-    
-    .projects-box {
-        min-height: 300px;
-    }
 }
 
 /* Habilidades */
@@ -624,16 +600,18 @@ span{
         text-align: center;
     }
    
-    @media (max-width: 600px) {
-        .contatos form .input-box {
-            flex-direction: column;
-        }
-        
-        .contatos form .input-box input {
-            width: 100%;
+
+    @media(max-width:2000px){
+        .skills .container {
+            grid-template-columns: repeat(2,1fr);
+            padding: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
         }
     }
-
 /* Adicione isso ao final do seu CSS existente */
 
 /* Responsividade geral */
@@ -821,52 +799,3 @@ span{
     }
 }
 
-/* Ajustes específicos para telas muito pequenas */
-@media (max-width: 400px) {
-    html {
-        font-size: 55%;
-    }
-    
-    .home .home-content h1 {
-        font-size: 3.5rem;
-    }
-    
-    .home-content h3 {
-        font-size: 2.2rem;
-    }
-    
-    .home-content p {
-        font-size: 1.5rem;
-    }
-    
-    .social-icon a {
-        width: 5rem;
-        height: 5rem;
-        font-size: 1.8rem;
-    }
-    
-    .btn {
-        padding: 0.8rem 2rem;
-        font-size: 1.4rem;
-    }
-    
-    .typing-text {
-        font-size: 2.5rem;
-        min-width: 200px;
-    }
-    
-    .heading {
-        font-size: 3.5rem;
-    }
-    
-    .projects-info a {
-        padding: 10px 20px;
-        font-size: 1.3rem;
-    }
-    
-    .contatos form .input-box input,
-    .contatos form textarea {
-        padding: 1.2rem;
-        font-size: 1.4rem;
-    }
-}
