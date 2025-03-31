@@ -430,7 +430,7 @@ span{
     cursor: pointer;
     transition: 0.3s ease;
     width: 100%;
-    overflow: hidden; /* Evita que conteúdo estoure */
+    overflow: hidden; 
     box-sizing: border-box;
 }
 
@@ -446,8 +446,8 @@ span{
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    align-items: flex-start; /* Alinhamento à esquerda */
-    padding: 2rem; /* Reduzi o padding para caber melhor */
+    align-items: flex-start; 
+    padding: 2rem; 
     height: 100%;
 }
 
@@ -559,7 +559,7 @@ span{
     margin-top: 2rem;
 }
 
-/* footer section */
+/* footer  */
 
     .footer{
         position: relative;
@@ -612,7 +612,6 @@ span{
             align-items: center;
         }
     }
-/* Adicione isso ao final do seu CSS existente */
 
 /* Responsividade geral */
 @media (max-width: 1200px) {
