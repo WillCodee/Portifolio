@@ -15,9 +15,16 @@
             <img src="images/image-removebg-preview (1).png" alt="Iniciais de William Lago">
         </a>
 
-        <i class="menuburger" id="menu-icon">
-            <img src="images/menu.png" alt="">
-        </i>
+       <!-- Checkbox invisível que controlará o menu -->
+    <input type="checkbox" id="menu-toggle">
+    
+    <!-- Label que servirá como botão do menu hamburger -->
+    <label for="menu-toggle" class="menu-btn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </label>
+
 
         <nav class="menu">
             <a href="#home" class="active">Home</a>
@@ -200,4 +207,12 @@
     
 
 </body>
+<script>
+    document.querySelectorAll('.menu a').forEach(link => { /*faz iteração sobre os cliques*/
+        link.addEventListener('click', () => { /*espera ouvir os cliques*/
+            document.getElementById('menu-toggle').checked = false;
+            /*encontra os chekbox do menu e depois fecha*/
+        });
+    });
+    </script>
 </html>

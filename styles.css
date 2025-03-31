@@ -43,20 +43,59 @@ html::-webkit-scrollbar-thumb{
     /* Estilização do botão móvel da barra de rolagem  */
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 3rem 9%;
-    background: rgba(0, 0, 0, 0.4); /*0.4 de opacidade*/
-    backdrop-filter: blur(10px); /*Desfoque*/
-    filter: drop-shadow(0 10px 15px rgba(0, 94, 235, 0.658));/*Sombra azul com profundidade*/
+    padding: 1.5rem 5%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100; /*Fica a frente de todos os conteudos*/
-    border-bottom: 1px solid rgba(255,255,255, 0.1);
+    z-index: 100;
+}
+
+/* Esconder o checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Estilo do botão hamburger (label) */
+.menu-btn {
+    display: none; /* Só aparece em mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* Linhas do hamburger */
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Estilo do menu de navegação */
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    color: white;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--main-color);
 }
 
 .logo{
@@ -99,34 +138,129 @@ html::-webkit-scrollbar-thumb{
     z-index: 1001;
 }
 
-@media (max-width: 995px) {
-    .menu {
-        width: 70%; /* Mais espaço para itens */
+@media (max-width: 768px) {
+    /* Ajustes no header e logo */
+    .header {
+        padding: 1.5rem 5%;
     }
     
-    .menu a {
+    .logo img {
+        width: 10%; /* Diminui a logo */
+        margin-bottom: 50px; /* Adiciona margin-bottom */
+    }
+    
+    /* Ajustes no menu hamburger */
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        right: 5%; /* Posiciona mais próximo da borda */
+        top: 1.8rem; /* Alinha verticalmente com a logo */
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        padding-top: 80px; /* Espaço para o header */
+    }
+    
+    /* Quando o checkbox estiver marcado, mostrar o menu */
+    #menu-toggle:checked ~ .menu {
+        left: 0;
+    }
+    
+    /* Transformar hamburger em X quando menu aberto */
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Ajuste do header no mobile */
+    .header {
+        padding: 1.5rem 5%;
+    }
+    
+    .logo img {
+        width: 120px;
+        max-width: 40%;
+    }
+
+    /* Ajuste no conteúdo principal para evitar sobreposição */
+    .home {
+        padding-top: 8rem; /* Reduz o padding-top */
+    }
+    
+    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
+    .home-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .home-content h3 {
         font-size: 2.2rem;
-        margin: 2.5rem 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .home-content p {
+        font-size: 1.6rem;
+    }
+    
+    /* Ajuste na imagem do perfil */
+    .home-img img {
+        width: 60vw;
+        margin-top: 2rem;
     }
 }
 
-@media (max-width: 768px) {
+/* Ajustes adicionais para telas muito pequenas */
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem 5%;
+    }
+    
+    .logo img {
+        width: 25%;
+    }
+    
+    .menu-btn {
+        top: 1.5rem;
+        width: 25px;
+        height: 18px;
+    }
+    
+    .hamburger-line {
+        height: 2.5px;
+    }
+    
     .home {
-        flex-direction: column-reverse;
-        gap: 3rem;
-        text-align: center;
-        padding-top: 300px;
+        padding-top: 6rem;
     }
     
-    .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+    .home-content h1 {
+        font-size: 3rem;
     }
     
-    .social-icon {
-        justify-content: center;
+    .home-content h3 {
+        font-size: 2rem;
     }
 }
+
+/*  */
 
 section{
     min-height: 100vh;
@@ -412,55 +546,6 @@ span{
 .info img:hover{
     width: 120px;
     transition: 0.3s ease;
-}
-
-@media screen and (max-width: 600px){
-    .skills .container{
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
-        grid-template-columns: repeat(3,1fr);
-        display: grid;
-    }
-    .skills .container .row{
-        grid-template-columns: repeat(2,1fr);
-        margin: 1rem;
-        padding: 2rem 0.2rem 2rem 0.2rem;
-        gap: 1rem;
-    }
-    .skills .container{
-        margin-top: 5px;
-        width: 100%;
-    }
-}
-
- @media (min-width: 601px) and (max-width: 790px) {
-    .skills .container{
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
-        grid-template-columns: repeat(3,1fr);
-        display: grid;
-    }
-    
-    .skills .container{
-        margin-top: 5px;
-        width: 100%;
-    } 
-} 
-
-@media (min-width: 790px) {
-    .skills .container{
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
-        grid-template-columns: repeat(3,1fr);
-        display: grid;
-    }
-    .skills .container{
-        margin-top: 5px;
-        width: 100%;
-    } 
 } *
 
 
@@ -549,29 +634,239 @@ span{
         }
     }
 
-    /* Reset completo para mobile */
-@media (max-width: 400px) {
-    * {
-        margin: 0 !important;
-        padding: 0 5px !important;
-        float: none !important;
-        text-align: left !important;
-        justify-content: flex-start !important;
-        align-items: flex-start !important;
+/* Adicione isso ao final do seu CSS existente */
+
+/* Responsividade geral */
+@media (max-width: 1200px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 70%;
     }
     
-    body {
-        position: static !important;
-        overflow-x: hidden !important;
+    .header {
+        padding: 2rem 5%;
     }
     
-    .header, section, footer {
-        position: relative !important;
-        left: 0 !important;
-        right: auto !important;
-        width: 100% !important;
-        transform: none !important;
+    .home {
+        gap: 4rem;
+    }
+    
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 3rem;
+    }
+    
+    .about .container-sobre {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Responsividade para tablets e celulares grandes */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+        transition: .3s ease;
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu a {
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+    
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 10rem;
+    }
+    
+    .home-img img {
+        width: 50vw;
+    }
+    
+    .social-icon {
+        justify-content: center;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Responsividade para celulares pequenos (a partir de 400px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .header {
+        padding: 1.5rem 4%;
+    }
+    
+    .logo img {
+        width: 40%;
+        height: auto;
+        margin-bottom: 0;
+        display: block;
+
+    }
+    
+    .home .home-content h1 {
+        font-size: 4rem;
+        margin-top: 50%;
+    }
+    
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    
+    .home-img img {
+        width: 70vw;
     }
 
-}
+    .menu-btn{
+        display: flex;
+        margin-right: 10%;
+        margin-top: 7%;
+    }
+
+    .heading {
+        font-size: 4rem;
+        padding-top: 10rem;
+        margin-bottom: 5rem;
+    }
     
+    .about .container-sobre {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .about .container-sobre p {
+        font-size: 1.6rem;
+        max-width: 95%;
+    }
+    .projects{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-box {
+        min-height: 300px;
+    }
+    
+    .projects-info h4 {
+        font-size: 1.8rem;
+    }
+    
+    .projects-info p {
+        font-size: 1.3rem;
+    }
+    
+    .skills .container {
+        grid-template-columns: repeat(1,1fr);
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info img {
+        width: 80px;
+    }
+    
+    .contatos form {
+        width: 95%;
+    }
+    
+    .footer .social a {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+    
+    .copyright {
+        font-size: 1.4rem;
+    }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 400px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .home .home-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    
+    .home-content p {
+        font-size: 1.5rem;
+    }
+    
+    .social-icon a {
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .typing-text {
+        font-size: 2.5rem;
+        min-width: 200px;
+    }
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .projects-info a {
+        padding: 10px 20px;
+        font-size: 1.3rem;
+    }
+    
+    .contatos form .input-box input,
+    .contatos form textarea {
+        padding: 1.2rem;
+        font-size: 1.4rem;
+    }
+}
