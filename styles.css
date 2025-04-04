@@ -20,7 +20,7 @@
 }
 
 html{
-    font-size: 85%;
+    font-size: 68.7%;
     overflow-x: hidden;
 }
 
@@ -195,8 +195,8 @@ html::-webkit-scrollbar-thumb{
     }
     
     .logo img {
-        width: 120px;
-        max-width: 40%;
+        width: 200px;
+        max-width:20%;
     }
 
     /* Ajuste no conteúdo principal para evitar sobreposição */
@@ -206,9 +206,10 @@ html::-webkit-scrollbar-thumb{
     
     /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
     .home-content h1 {
-        font-size: 3.5rem;
+        font-size: 1rem;
         line-height: 1.2;
         margin-bottom: 1rem;
+        margin-top: 25px;
     }
     
     .home-content h3 {
@@ -246,10 +247,7 @@ html::-webkit-scrollbar-thumb{
     .hamburger-line {
         height: 2.5px;
     }
-    
-    .home {
-        padding-top: 6rem;
-    }
+
     
     .home-content h1 {
         font-size: 3rem;
@@ -400,7 +398,7 @@ span{
     margin: auto; 
     text-align: justify;
     max-width: 80%;
-    margin-top: 20px;
+    margin-top: 40px;
     line-height: 1.2; /* Espaçamento entre linhas */
 }
 
@@ -613,10 +611,28 @@ span{
         }
     }
 
+    @media(min-width:2000px){
+        .skills .container {
+            grid-template-columns: repeat(2,1fr);
+            padding: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
 /* Responsividade geral */
-@media (max-width: 1200px) {
+@media (max-width: 1200px)    {
     html {
         font-size: 75%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1300px){
+    .home-content h1{
+        margin-top: 30%;
     }
 }
 
@@ -626,7 +642,7 @@ span{
     }
     
     .header {
-        padding: 2rem 5%;
+        padding: rem 5%;
     }
     
     .home {
@@ -634,7 +650,8 @@ span{
     }
     
     .home .home-content h1 {
-        font-size: 5rem;
+        font-size: 3rem;
+        padding-top: 20px;
     }
     
     .home-content h3 {
