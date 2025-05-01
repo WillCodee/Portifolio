@@ -54,6 +54,7 @@ html::-webkit-scrollbar-thumb{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    box-shadow: 0 0 10px var(--main-color);
 }
 
 /* Esconder o checkbox */
@@ -367,6 +368,8 @@ span{
     margin-top: -5px;
 }
 
+
+
 .about{
     align-items: center;
     gap: 2.5rem;
@@ -596,6 +599,38 @@ span{
         line-height: 1.8;
         margin-bottom: 0;
         text-align: center;
+    }
+    /* menu-obrigado */
+    .footer-thanks{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 50px 0;
+        margin-top: 20%;
+        background-color: var(--main-color);
+    }
+
+    .footer-thanks .social{
+        text-align: center;
+        padding-bottom: 90px;
+        color: black;
+    }
+    .footer-thanks .social a{
+        font-size: 80px;
+        color: #000000;
+        border: 2px solid black;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 10px;
+        transform: 0.3s ease;
+    }
+    .footer-thanks .social a:hover{
+        transform: scale(1.2) translateY(-5px);
+        background: #000000;
+        color: var(--main-color);
     }
    
 

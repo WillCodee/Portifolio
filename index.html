@@ -8,6 +8,8 @@
     <!-- Font importada -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <header class="header">
@@ -84,7 +86,8 @@
         <div class="projects-container">
             <div class="projects-box">
                 <div class="projects-info">
-                    <h4>Smart Home</h4>
+                    <h4>Smart Home 💡</h4>
+                    
                     <p> Consiste em um aplicativo onde o usuário se cadastra e entra na tela principal 
                     dividida por cômodos e em cada cômodo um objeto o qual você o possa 
                     manipular pelo seu smartphone ou computador, no nosso caso foi uma lâmpada. Onde
@@ -96,7 +99,7 @@
             </div>
             <div class="projects-box">
                 <div class="projects-info">
-                    <h4>Gerencia Bike</h4>
+                    <h4>Gerencia Bike 🚲</h4>
                     <p>
                         Um sistema de gestão para bicicletários de condomínios, acessível via site,que automatiza o controle do uso de bicicletas, 
                         acelerando a praticidade para administradores e moradores. Com funcionalidades como monitoramento em tempo real registro de uso e alertas 
@@ -172,13 +175,16 @@
 
     <section class="contatos" id="contatos">
         <h2 class="heading">Entre em <span>contato</span></h2>
-        <form action="https://formsubmit.co/williamsilvalago@gmail.com" method="POST">
+        <form action="https://formsubmit.co/williamsilvalago@gmail.com" type="_self" method="POST">
             <div class="input-box">
                 <input type="text" name="name" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu email" required>
                 <input type="tel" name="tel" placeholder="Número de Telefone" required>
                 <input type="text" name="menssagem" placeholder="Assunto">
                 <textarea name="menssagem" id="" cols="30" rows="10" placeholder="Digite sua Mensagem"></textarea>
+                <input type="hidden" name="_next" value="https://willcodee.github.io/Portifolio/obrigado.html">
+                <input type="hidden" name="autoresponse" value="Sua Mensagem foi enviada com sucesso! Em Breve entrarei em Contato">
+                <input type="hidden" name="_template" value="box">
                 <input type="submit" value="Envie Mensagem" class="btn">
             </div>
         </form>
