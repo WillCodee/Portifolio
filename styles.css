@@ -761,13 +761,14 @@ video{
     .project-video{
     text-align: center; 
     margin: 40px;
-    margin-right: 20px;
-    margin-bottom: -30%;
+    
     }
     
     video{
         height: 400px;
         width: 450px;
+        margin-right: 20px;
+    margin-bottom: -30%;
     }
 
     .skills .container {
