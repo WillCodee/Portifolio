@@ -833,6 +833,11 @@ video{
     .projects-info p {
         font-size: 1.3rem;
     }
+
+    video{
+        height: 200px;
+        width: 250px;
+    }
     
     .skills .container {
         grid-template-columns: repeat(1,1fr);
