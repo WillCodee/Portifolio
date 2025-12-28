@@ -758,9 +758,15 @@ video{
         grid-template-columns: 1fr;
     }
     
+    video{
+        height: 400px;
+        width: 450px;
+    }
+
     .skills .container {
         grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
 /* Responsividade para celulares pequenos (a partir de 400px) */
