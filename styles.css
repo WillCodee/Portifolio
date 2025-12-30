@@ -760,16 +760,15 @@ video{
 
     .project-video{
     text-align: center; 
-    margin: 40px;
-    
+    margin-bottom: -70%;
     }
-    
+
     video{
-        height: 400px;
-        width: 450px;
-        margin-right: 20px;
-    margin-bottom: -30%;
+        width: 200px;
+        height: 200px;
+        
     }
+    
 
     .skills .container {
         grid-template-columns: repeat(1, 1fr);
@@ -848,10 +847,10 @@ video{
         font-size: 1.3rem;
     }
 
-    video{
+    /* video{
         height: 200px;
         width: 250px;
-    }
+    } */
     
     .skills .container {
         grid-template-columns: repeat(1,1fr);
