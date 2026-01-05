@@ -140,7 +140,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 @media (max-width: 768px) {
-    /* Ajustes no header e logo */
+    /* Criação do Menu hamburguer */
     .header {
         padding: 1.5rem 5%;
     }
@@ -227,37 +227,11 @@ html::-webkit-scrollbar-thumb{
         width: 60vw;
         margin-top: 2rem;
     }
+
+
 }
 
-/* Ajustes adicionais para telas muito pequenas */
-@media (max-width: 480px) {
-    .header {
-        padding: 1rem 5%;
-    }
-    
-    .logo img {
-        width: 25%;
-    }
-    
-    .menu-btn {
-        top: 1.5rem;
-        width: 25px;
-        height: 18px;
-    }
-    
-    .hamburger-line {
-        height: 2.5px;
-    }
 
-    
-    .home-content h1 {
-        font-size: 3rem;
-    }
-    
-    .home-content h3 {
-        font-size: 2rem;
-    }
-}
 
 
 section{
@@ -803,6 +777,31 @@ video{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    /* .certifications{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.border-certification{
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.border-certification img{
+    position: relative;
+    width: 25vw;
+    box-shadow: 0 0 25px var(--main-color);
+    border: 2px solid var(--main-color); 
+}
+
+.border-certification:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px var(--main-color));
+    
+} */
+
 }
 
 /* Responsividade para celulares pequenos (a partir de 400px) */
@@ -876,10 +875,29 @@ video{
         font-size: 1.3rem;
     }
 
-    /* video{
-        height: 200px;
-        width: 250px;
-    } */
+  /* .certifications{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.border-certification{
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.border-certification img{
+    position: relative;
+    width: 25vw;
+    box-shadow: 0 0 25px var(--main-color);
+    border: 2px solid var(--main-color); 
+}
+
+.border-certification:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px var(--main-color));   
+} */
     
     .skills .container {
         grid-template-columns: repeat(1,1fr);
