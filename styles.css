@@ -776,7 +776,7 @@ video{
     
     .home .home-content h1 {
         font-size: 4rem;
-        margin-top: 50%;
+        margin-top: 25%;
     }
     
     .home-content h3 {
@@ -803,13 +803,15 @@ video{
     }
     
     .about .container-sobre {
-        width: 95%;
-        padding: 1.5rem;
+        width: 110%;
+        padding: 2rem;
     }
     
     .about .container-sobre p {
         font-size: 1.6rem;
-        max-width: 95%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
     }
     .projects{
         display: flex;
@@ -829,14 +831,27 @@ video{
     .projects-info p {
         font-size: 1.3rem;
     }
+
+    .project-video{
+        margin-bottom: 0.5%;
+    }
     
-    .skills .container {
+    .skills .container .row{
         grid-template-columns: repeat(1,1fr);
         padding: auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+
+
+    .border-certification img{
+        width: 65vw;
+    }
+
+    .border-certification:hover{
+        transform: scale(1.1);
     }
     
     .info img {
@@ -845,6 +860,11 @@ video{
     
     .contatos form {
         width: 95%;
+    }
+
+    .contatos form .input-box input,
+    .contatos form textarea{
+        font-size: 2rem;
     }
     
     .footer .social a {
