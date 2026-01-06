@@ -368,29 +368,46 @@ video{
 
 /* Certificados */
 
-.certifications{
-    display: grid;
+.certificates{
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 8rem;
 }
 
-.border-certification{
+.border-certificates{
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.border-certification img{
+.border-certificates img{
     position: relative;
-    width: 25vw;
+    width: 30vw;
     box-shadow: 0 0 25px var(--main-color);
     border: 2px solid var(--main-color); 
 }
 
-.border-certification:hover{
+.border-certificates:hover{
     transform: scale(1.1);
     filter: drop-shadow(0 0 25px var(--main-color));
     
+}
+
+
+.more-certificates a{
+    display: inline-block;
+    padding: 24px 48px;
+    background: linear-gradient(135deg, var(--main-color), #0066ff);
+    color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.more-certificates a:hover{
+    transform: scale(1.2);
 }
 
 /* Habilidades */
@@ -566,7 +583,12 @@ video{
         }
     }
 
-    /* @media(min-width:2000px){
+    @media(min-width:2000px){
+        html {
+        font-size: 120%;
+        }
+
+
         .skills .container {
             grid-template-columns: repeat(2,1fr);
             padding: auto;
@@ -576,7 +598,35 @@ video{
             flex-wrap: wrap;
             align-items: center;
         }
-    } */
+
+
+        .border-certification img{
+        width: 30vw;
+        }
+
+        .about .container-sobre p{
+    font-size: 30px;
+    font-weight: 400;
+    margin: auto; 
+    text-align: justify;
+    max-width: 80%;
+    margin-top: 40px;
+    line-height: 1.2; /* Espaçamento entre linhas */
+}
+
+.about .container-sobre {
+    border: 2px solid var(--main-color); 
+    border-radius: 1rem; 
+    padding: 1rem; 
+    width: 1000px; 
+    height: 850px;
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+    }
 
 /* Responsividade geral */
 @media (max-width: 1200px)    {
@@ -597,7 +647,7 @@ video{
     }
     
     .header {
-        padding: rem 5%;
+        padding: 2rem 5%;
     }
     
     .home {
