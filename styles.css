@@ -314,6 +314,7 @@ span{
     width: 100%;
     overflow: hidden; 
     box-sizing: border-box;
+    
 }
 
 .projects-box:hover {
@@ -356,12 +357,15 @@ span{
 }
 
 .project-video{
+    flex-direction: column;
     text-align: center; 
-    margin: 40px 0;
+    display: flex;
+    
     margin-bottom: -100%;
 }
 
 video{ 
+    margin-left: -5%;
     border-radius: 10px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
 }
@@ -605,27 +609,30 @@ video{
         }
 
         .about .container-sobre p{
-    font-size: 30px;
-    font-weight: 400;
-    margin: auto; 
-    text-align: justify;
-    max-width: 80%;
-    margin-top: 40px;
-    line-height: 1.2; /* Espaçamento entre linhas */
-}
+            font-size: 30px;
+            font-weight: 400;
+            margin: auto; 
+            text-align: justify;
+            max-width: 80%;
+            margin-top: 40px;
+            line-height: 1.2; /* Espaçamento entre linhas */
+        }
 
-.about .container-sobre {
-    border: 2px solid var(--main-color); 
-    border-radius: 1rem; 
-    padding: 1rem; 
-    width: 1000px; 
-    height: 850px;
-    text-align: center; 
-    box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
-    margin: 0 auto; 
-    overflow: hidden;
-}
+    .about .container-sobre {
+        border: 2px solid var(--main-color); 
+        border-radius: 1rem; 
+        padding: 1rem; 
+        width: 1000px; 
+        height: 850px;
+        text-align: center; 
+        box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
+        margin: 0 auto; 
+        overflow: hidden;
+        }
 
+        .paragrafo-projects{
+            margin-top: 30%;
+        }
     }
 
 /* Responsividade geral */
@@ -633,15 +640,35 @@ video{
     html {
         font-size: 75%;
     }
+
+    .paragrafo-projects{
+            margin-top: 30%;
+    }
+
+    
 }
 
 @media (min-width: 1200px) and (max-width:1300px){
     .home-content h1{
         margin-top: 30%;
     }
+
+        .paragrafo-projects{
+            margin-top: 30%;
+        }
+        .projects-box{
+            height: 80%;
+            
+        }
+        .projects-info {
+            height: 140%;
+        }
+}
+@media(min-width: 1300px){
+
 }
 
-@media (max-width: 992px) {
+@media (max-width: 998px) {
     html {
         font-size: 70%;
     }
@@ -666,6 +693,23 @@ video{
     .about .container-sobre {
         width: 90%;
         height: auto;
+    }
+    .paragrafo-projects{
+            margin-top: 30%;
+    }
+
+     .paragrafo-projects{
+            margin-top: 30%;
+        }
+        .projects-box{
+            height: 80%;
+            
+        }
+        .projects-info {
+            height: 140%;
+        }
+    .project-video{
+        margin-left: -0%;
     }
 }
 
