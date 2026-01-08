@@ -1,0 +1,58 @@
+
+.titulo div{
+    margin-right: 50%;
+}
+
+.titulo h1{
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 25px;
+        color: #fff;
+        box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
+}
+
+.titulo h1:hover{
+    transition: 0.3s ease;
+    overflow: hidden;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 25px rgb(32, 103, 211));
+}
+
+.certificados{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 15%;
+}
+.container-certificados{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: baseline;
+    gap: 20rem;
+}
+
+.certificado{
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certificado img{
+    position: relative;
+    width: 25vw;
+    box-shadow: 0 0 25px var(--main-color);
+    border: 2px solid var(--main-color); 
+    height: 20vw;
+}
+
+.certificado:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px var(--main-color));
+    
+}
+
+.button-back{
+    margin-top: 20%;
+}
