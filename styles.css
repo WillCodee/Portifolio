@@ -666,9 +666,29 @@ video{
 }
 @media(min-width: 1300px){
 
+        .project-video{
+            margin-bottom: 10%;
+        }
+
+        video{
+            width: 30%;
+        }
+
+        .paragrafo-projects{
+        margin-top: -100%;
+        }
+
+        .border-certificates img{
+            width: 100%;
+        }
+
+        .projects-info{
+            margin-bottom: -70%;
+        }
+
 }
 
-@media (max-width: 998px) {
+@media (min-width: 790px) {
     html {
         font-size: 70%;
     }
@@ -694,23 +714,20 @@ video{
         width: 90%;
         height: auto;
     }
+
+
     .paragrafo-projects{
-            margin-top: 30%;
+        margin-top: -100%;
     }
 
-     .paragrafo-projects{
-            margin-top: 30%;
-        }
-        .projects-box{
-            height: 80%;
-            
-        }
-        .projects-info {
-            height: 140%;
-        }
-    .project-video{
-        margin-left: -0%;
+    video{
+        width: 120%;
+        margin-left: -10%;
     }
+
+     .border-certificates img{
+            width: 100%;
+        }
 }
 
 /* Responsividade para tablets e celulares grandes */
