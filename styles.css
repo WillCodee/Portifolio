@@ -139,101 +139,6 @@ html::-webkit-scrollbar-thumb{
     z-index: 1001;
 }
 
-@media (max-width: 768px) {
-    /* Criação do Menu hamburguer */
-    .header {
-        padding: 1.5rem 5%;
-    }
-    
-    .logo img {
-        width: 10%; /* Diminui a logo */
-        margin-bottom: 50px; /* Adiciona margin-bottom */
-    }
-    
-    /* Ajustes no menu hamburger */
-    .menu-btn {
-        display: flex;
-        position: absolute;
-        right: 5%; /* Posiciona mais próximo da borda */
-        top: 1.8rem; /* Alinha verticalmente com a logo */
-    }
-    
-    .menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--bg-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease;
-        padding-top: 80px; /* Espaço para o header */
-    }
-    
-    /* Quando o checkbox estiver marcado, mostrar o menu */
-    #menu-toggle:checked ~ .menu {
-        left: 0;
-    }
-    
-    /* Transformar hamburger em X quando menu aberto */
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    
-    /* Ajuste do header no mobile */
-    .header {
-        padding: 1.5rem 5%;
-    }
-    
-    .logo img {
-        width: 200px;
-        max-width:20%;
-    }
-
-    /* Ajuste no conteúdo principal para evitar sobreposição */
-    .home {
-        padding-top: 8rem; /* Reduz o padding-top */
-    }
-    
-    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
-    .home-content h1 {
-        font-size: 1rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        margin-top: 25px;
-    }
-    
-    .home-content h3 {
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .home-content p {
-        font-size: 1.6rem;
-    }
-    
-    /* Ajuste na imagem do perfil */
-    .home-img img {
-        width: 60vw;
-        margin-top: 2rem;
-    }
-
-
-}
-
-
-
-
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -390,11 +295,11 @@ span{
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas grandes */
+    grid-template-columns: repeat(3, 1fr); /* 2 colunas em telas grandes */
     align-items: center;
     gap: 2.5rem;
     width: 100%;
-    max-width: 1200px; /* Limita a largura máxima */
+    
     margin: 0 auto; /* Centraliza o container */
     padding: 0 20px; /* Padding lateral opcional */
     box-sizing: border-box;
@@ -409,6 +314,7 @@ span{
     width: 100%;
     overflow: hidden; 
     box-sizing: border-box;
+    
 }
 
 .projects-box:hover {
@@ -451,39 +357,42 @@ span{
 }
 
 .project-video{
+    flex-direction: column;
     text-align: center; 
-    margin: 40px 0;
+    display: flex;
+    
     margin-bottom: -100%;
 }
 
 video{ 
+    margin-left: -5%;
     border-radius: 10px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
 }
 
 /* Certificados */
 
-.certifications{
-    display: grid;
+.certificates{
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 8rem;
 }
 
-.border-certification{
+.border-certificates{
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.border-certification img{
+.border-certificates img{
     position: relative;
-    width: 25vw;
+    width: 30vw;
     box-shadow: 0 0 25px var(--main-color);
     border: 2px solid #fff; 
 }
 
-.border-certification:hover{
+.border-certificates:hover{
     transform: scale(1.1);
     filter: drop-shadow(0 0 25px var(--main-color)); 
 }
@@ -505,6 +414,22 @@ video{
 }
 
 .button-link a:hover{
+    transform: scale(1.2);
+}
+
+
+.more-certificates a{
+    display: inline-block;
+    padding: 24px 48px;
+    background: linear-gradient(135deg, var(--main-color), #0066ff);
+    color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.more-certificates a:hover{
     transform: scale(1.2);
 }
 
@@ -682,6 +607,11 @@ video{
     }
 
     @media(min-width:2000px){
+        html {
+        font-size: 120%;
+        }
+
+
         .skills .container {
             grid-template-columns: repeat(2,1fr);
             padding: auto;
@@ -691,28 +621,109 @@ video{
             flex-wrap: wrap;
             align-items: center;
         }
+
+
+        .border-certification img{
+        width: 30vw;
+        }
+
+        .about .container-sobre p{
+            font-size: 30px;
+            font-weight: 400;
+            margin: auto; 
+            text-align: justify;
+            max-width: 80%;
+            margin-top: 40px;
+            line-height: 1.2; /* Espaçamento entre linhas */
+        }
+
+    .about .container-sobre {
+        border: 2px solid var(--main-color); 
+        border-radius: 1rem; 
+        padding: 1rem; 
+        width: 1000px; 
+        height: 850px;
+        text-align: center; 
+        box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
+        margin: 0 auto; 
+        overflow: hidden;
+        }
+
+        .paragrafo-projects{
+            margin-top: 30%;
+        }
     }
+
+@media (min-width: 3000px){
+    
+}
 
 /* Responsividade geral */
 @media (max-width: 1200px)    {
     html {
         font-size: 75%;
     }
+
+    .paragrafo-projects{
+            margin-top: 30%;
+    }
+
+    
 }
 
-@media (min-width: 1200px) and (max-width:1300px){
+@media (min-width: 1200px){
     .home-content h1{
         margin-top: 30%;
     }
+
+        .paragrafo-projects{
+            margin-top: 30%;
+        }
+        .projects-box{
+            height: 80%;
+            
+        }
+        .projects-info {
+            height: 140%;
+        }
 }
 
-@media (max-width: 992px) {
+@media(min-width: 1300px){
+
+        video{
+            width: 30%;
+        }
+
+        .projects-info{
+            margin-top: 100%;
+            height: 30%;
+        }
+
+        .paragrafo-projects{
+        margin-top: -70%;
+        }
+
+        .border-certificates img{
+            width: 100%;
+        }
+
+        .about .container-sobre{
+            margin: 0 auto;
+        }
+
+        .menu a{
+            font-size: 20px;
+        }
+
+}
+
+@media (min-width: 790px) {
     html {
         font-size: 70%;
     }
     
     .header {
-        padding: rem 5%;
+        padding: 2rem 5%;
     }
     
     .home {
@@ -732,10 +743,83 @@ video{
         width: 90%;
         height: auto;
     }
+
+
+    .paragrafo-projects{
+        margin-top: -100%;
+    }
+
+    video{
+        width: 120%;
+        margin-left: -10%;
+    }
+
+     .border-certificates img{
+            width: 100%;
+        }
 }
 
 /* Responsividade para tablets e celulares grandes */
 @media (max-width: 768px) {
+
+      /* Ajustes no header e logo */
+    .header {
+        padding: 1.5rem 5%;
+    }
+
+    
+    /* Ajustes no menu hamburger */
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        right: 5%; /* Posiciona mais próximo da borda */
+        top: 1.8rem; /* Alinha verticalmente com a logo */
+    }
+    
+    /* Quando o checkbox estiver marcado, mostrar o menu */
+    #menu-toggle:checked ~ .menu {
+        left: 0;
+    }
+    
+    /* Transformar hamburger em X quando menu aberto */
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    
+    .logo img {
+        /* width: 200px; */
+        width: 10%; /* Diminui a logo */
+        margin-bottom: 50px; /* Adiciona margin-bottom */
+        max-width:20%;
+    }
+    
+    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
+    .home-content h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 25px;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+
     #menu-icon {
         display: block;
     }
@@ -751,6 +835,7 @@ video{
         align-items: center;
         padding: 3rem 0;
         transition: .3s ease;
+        padding-top: 80px; /* Espaço para o header */
     }
     
     .menu.active {
@@ -763,14 +848,17 @@ video{
         font-size: 2rem;
     }
     
+    /* Ajuste no conteúdo principal para evitar sobreposição */
     .home {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 10rem;
+        padding-top: 8rem;
     }
     
+    /* Ajuste na imagem do perfil */
     .home-img img {
         width: 50vw;
+        margin-top: 2rem;
     }
     
     .social-icon {
@@ -797,31 +885,6 @@ video{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* .certifications{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-}
-
-.border-certification{
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.border-certification img{
-    position: relative;
-    width: 25vw;
-    box-shadow: 0 0 25px var(--main-color);
-    border: 2px solid var(--main-color); 
-}
-
-.border-certification:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 25px var(--main-color));
-    
-} */
-
 }
 
 /* Responsividade para celulares pequenos (a partir de 400px) */
@@ -832,6 +895,15 @@ video{
     
     .header {
         padding: 1.5rem 4%;
+    }
+
+     .hamburger-line {
+        height: 2.5px;
+    }
+
+    
+    .home-content h1 {
+        font-size: 3rem;
     }
     
     .logo img {
@@ -844,7 +916,7 @@ video{
     
     .home .home-content h1 {
         font-size: 4rem;
-        margin-top: 50%;
+        margin-top: 25%;
     }
     
     .home-content h3 {
@@ -859,6 +931,9 @@ video{
         display: flex;
         margin-right: 10%;
         margin-top: 7%;
+        top: 1.5rem;
+        width: 25px;
+        height: 18px;
     }
 
     .heading {
@@ -868,13 +943,15 @@ video{
     }
     
     .about .container-sobre {
-        width: 95%;
-        padding: 1.5rem;
+        width: 110%;
+        padding: 2rem;
     }
     
     .about .container-sobre p {
         font-size: 1.6rem;
-        max-width: 95%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
     }
     .projects{
         display: flex;
@@ -895,37 +972,26 @@ video{
         font-size: 1.3rem;
     }
 
-  /* .certifications{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-}
-
-.border-certification{
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.border-certification img{
-    position: relative;
-    width: 25vw;
-    box-shadow: 0 0 25px var(--main-color);
-    border: 2px solid var(--main-color); 
-}
-
-.border-certification:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 25px var(--main-color));   
-} */
+    .project-video{
+        margin-bottom: 0.5%;
+    }
     
-    .skills .container {
+    .skills .container .row{
         grid-template-columns: repeat(1,1fr);
         padding: auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+
+
+    .border-certification img{
+        width: 65vw;
+    }
+
+    .border-certification:hover{
+        transform: scale(1.1);
     }
     
     .info img {
@@ -934,6 +1000,11 @@ video{
     
     .contatos form {
         width: 95%;
+    }
+
+    .contatos form .input-box input,
+    .contatos form textarea{
+        font-size: 2rem;
     }
     
     .footer .social a {
