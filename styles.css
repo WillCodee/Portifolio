@@ -71,6 +71,8 @@ html::-webkit-scrollbar-thumb{
     height: 21px;
     cursor: pointer;
     z-index: 101;
+    
+    
 }
 
 /* Linhas do hamburger */
@@ -418,7 +420,7 @@ video{
 }
 
 
-.more-certificates a{
+.button-link a{
     display: inline-block;
     padding: 24px 48px;
     background: linear-gradient(135deg, var(--main-color), #0066ff);
@@ -429,7 +431,7 @@ video{
     transition: transform 0.3s ease;
 }
 
-.more-certificates a:hover{
+.button-link a:hover{
     transform: scale(1.2);
 }
 
@@ -654,9 +656,7 @@ video{
         }
     }
 
-@media (min-width: 3000px){
-    
-}
+
 
 /* Responsividade geral */
 @media (max-width: 1200px)    {
@@ -943,8 +943,9 @@ video{
     }
     
     .about .container-sobre {
-        width: 110%;
+        width: 100%;
         padding: 2rem;
+        height: 100%;
     }
     
     .about .container-sobre p {
@@ -953,29 +954,20 @@ video{
         justify-content: center;
         text-align: center;
     }
-    .projects{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .projects-box {
-        min-height: 300px;
-    }
-    
-    .projects-info h4 {
-        font-size: 1.8rem;
-    }
+/**/
     
     .projects-info p {
-        font-size: 1.3rem;
+        text-align: center;
     }
 
-    .project-video{
-        margin-bottom: 0.5%;
-    }
+    .project-video video{
+       width: 300px;
+       margin-left: 3%;
+    } 
     
+
+    /**/
     .skills .container .row{
         grid-template-columns: repeat(1,1fr);
         padding: auto;
@@ -986,12 +978,17 @@ video{
     }
 
 
-    .border-certification img{
+    .border-certificates img{
         width: 65vw;
     }
 
-    .border-certification:hover{
+    .border-certificates:hover{
         transform: scale(1.1);
+    }
+
+    .button-link a{
+        padding: 24px 48px;
+        font-size: 20px;
     }
     
     .info img {
