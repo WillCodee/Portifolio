@@ -161,13 +161,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20%;
     }
 
     .container-certificados {
        display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20%;
+        
     }
 
     .item-certificado img{
