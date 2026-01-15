@@ -53,17 +53,21 @@
     
 }
 
-.button-back{
+.button-link{
     margin-top: 20%;
 }
 
     @media(max-width:3000px){
-        .logo-certificado{
-            width: 25%;
+        .logo-certificado img{
+            width: 40%;
         }
 
         .titulo div{
             margin-right: 40%;
+        }
+
+        .titulo h1{
+            font-size: 5rem;
         }
 
     .container-certificados{
@@ -71,14 +75,15 @@
         grid-template-columns: repeat(2,1fr);
         align-items: center;
         justify-content: center;
+        margin-top: 10%;
     }
 
     .item-certificado img{
-        width: 30vw;
+        width: 35vw;
         height: 25vw;
     }
 
-    .button-back{
+    .button-link{
         margin-top: 10%;
     }
 
@@ -135,7 +140,7 @@
         align-items: center;
     }
 
-    .button-back a{
+    .button-link a{
         padding: 24px 48px;
         font-size: 20px;
     }
@@ -143,8 +148,12 @@
 
 @media (max-width: 480px){
 
+    .logo-certificado img{
+        width: 50%;
+    }
+
     .titulo div{
-        margin-right: 28%;
+        margin-right: 25%;
     }
 
      .certificados{
@@ -152,23 +161,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10%;
     }
 
     .container-certificados {
        display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 10%;
     }
 
     .item-certificado img{
-        width: 45vw;
-        height: 30vw;
+        width: 60vw;
+        height: 40vw;
     }
 
-    .button-back a{
+    .button-link a{
         padding: 24px 48px;
         font-size: 20px;
     }
-
-    
 }
