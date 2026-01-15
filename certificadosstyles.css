@@ -143,8 +143,12 @@
 
 @media (max-width: 480px){
 
+    .logo-certificado img{
+        width: 50%;
+    }
+
     .titulo div{
-        margin-right: 28%;
+        margin-right: 25%;
     }
 
      .certificados{
@@ -158,11 +162,12 @@
        display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 10%;
     }
 
     .item-certificado img{
-        width: 45vw;
-        height: 30vw;
+        width: 60vw;
+        height: 40vw;
     }
 
     .button-back a{
