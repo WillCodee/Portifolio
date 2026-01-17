@@ -295,81 +295,58 @@ span{
     padding: 10rem 3% 2rem; /* Adicione padding para espaçamento */
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 colunas em telas grandes */
-    align-items: center;
-    gap: 2.5rem;
-    width: 100%;
-    
-    margin: 0 auto; /* Centraliza o container */
-    padding: 0 20px; /* Padding lateral opcional */
-    box-sizing: border-box;
+.projects-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
 }
 
-.projects-box {
-    background-color: var(--main-color);
-    min-height: 350px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-    width: 100%;
+.projects-box{
+    width: 425px;
+    background-color: rgb(32, 103, 211);
+    border-radius: 2rem;
     overflow: hidden; 
     box-sizing: border-box;
-    
+    transition: 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
 }
 
 .projects-box:hover {
     background: transparent;
     color: var(--text-color);
     transform: scale(1.03);
-    border: 1px solid var(--main-color);
+    border: 1px solid rgb(32, 103, 211);
 }
 
-.projects-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: center;
-    align-items: flex-start; 
-    padding: 2rem; 
-    height: 100%;
+.projects-box video{
+    width: 100%;
+    height: auto;
 }
 
-.projects-info h4 {
-    font-size: 2rem; /* Tamanho menor para responsividade */
-    margin-bottom: 1rem;
+.projects-info{
+    padding: 16px;
+    
 }
 
-.projects-info p {
+.projects-info h4{
     font-size: 2rem;
+}
+
+.projects-info p{
+    font-size: 1.5rem;
     line-height: 1.5;
-    margin: 1rem 0;
-    margin-top: -150%;
 }
 
 .projects-info a {
     display: inline-block;
     padding: 12px 24px;
-    background: linear-gradient(135deg, var(--main-color), #0066ff);
+    background: linear-gradient(135deg, rgb(32, 103, 211), #0066ff);
     color: white;
     font-size: 25px;
     border-radius: 50px;
     margin-top: 15px;
-}
-
-.project-video{
-    flex-direction: column;
-    text-align: center; 
-    display: flex;
-    
-    margin-bottom: -100%;
-}
-
-video{ 
-    margin-left: -5%;
-    border-radius: 10px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
 }
 
 /* Certificados */
@@ -651,9 +628,9 @@ video{
         overflow: hidden;
         }
 
-        .paragrafo-projects{
+        /* .paragrafo-projects{
             margin-top: 30%;
-        }
+        } */
     }
 
 
@@ -664,9 +641,10 @@ video{
         font-size: 75%;
     }
 
-    .paragrafo-projects{
+    /* .paragrafo-projects{
             margin-top: 30%;
-    }
+    } */
+    
 
     
 }
@@ -676,7 +654,7 @@ video{
         margin-top: 30%;
     }
 
-        .paragrafo-projects{
+        /* .paragrafo-projects{
             margin-top: 30%;
         }
         .projects-box{
@@ -685,23 +663,10 @@ video{
         }
         .projects-info {
             height: 140%;
-        }
+        } */
 }
 
-@media(min-width: 1300px){
-
-        video{
-            width: 30%;
-        }
-
-        .projects-info{
-            margin-top: 100%;
-            height: 30%;
-        }
-
-        .paragrafo-projects{
-        margin-top: -70%;
-        }
+@media(min-width: 1300px){  
 
         .border-certificates img{
             width: 100%;
@@ -742,16 +707,6 @@ video{
     .about .container-sobre {
         width: 90%;
         height: auto;
-    }
-
-
-    .paragrafo-projects{
-        margin-top: -100%;
-    }
-
-    video{
-        width: 120%;
-        margin-left: -10%;
     }
 
      .border-certificates img{
@@ -865,7 +820,7 @@ video{
         justify-content: center;
     }
     
-    .projects-container {
+    /* .projects-container {
         grid-template-columns: 1fr;
     }
 
@@ -878,7 +833,7 @@ video{
         width: 200px;
         height: 200px;
         
-    }
+    } */
     
 
     .skills .container {
@@ -955,17 +910,6 @@ video{
         text-align: center;
     }
 
-/**/
-    
-    .projects-info p {
-        text-align: center;
-    }
-
-    .project-video video{
-       width: 300px;
-       margin-left: 3%;
-    } 
-    
 
     /**/
     .skills .container .row{
