@@ -204,32 +204,50 @@
         width: 80%;
     }
 
-    .titulo div{
-        margin-right: 25%;
+    .header.titulo {
+        flex-direction: row; 
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .titulo div {
+        margin-right: 0; 
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem; 
+    }
+
+    .certificado_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px;
     }
 
     .item-certificado {
-    background-color: transparent;
-    width: 100%;
-    max-width: 550px;
-    height: 350px; 
-}
+        width: 90%; 
+        max-width: 350px; 
+        height: 250px; 
+        margin-bottom: 20px; 
+    }
 
-.flip {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
 
-.frente, .tras {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-}
+    .frente, .tras {
+        width: 100%; 
+        height: 100%;
+        left: 0; /* Garante que comece no canto esquerdo do pai */
+        top: 0;
+    }
 
-.frente img {
-    width: 100%;
-    height: 100%;
-}
+    .frente img {
+        object-fit: cover;
+    }
+    
+    .tras {
+        padding: 20px; /* Evita que o texto encoste nas bordas */
+    }
 
 }
