@@ -169,11 +169,30 @@
 @media (max-width: 990px){
 
     .logo-certificado img{
-        width: 40%;
+        width: 50%;
     }
 
-    .titulo div{
-    margin-right: 30%;
+    .header.titulo {
+        flex-direction: row; 
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .titulo div {
+        margin-right: 0; 
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 3rem; 
+    }
+
+    .certificado_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px;
     }
 
 }
