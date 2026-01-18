@@ -181,19 +181,55 @@
 
 @media (max-width: 768px){
 
-    .titulo h1{
-    font-size: 3rem;
-     }
-
-     .logo-certificado img{
+ .logo-certificado img{
         width: 80%;
-     }
+    }
 
-     .frente, .tras {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-}
+    .header.titulo {
+        flex-direction: row; 
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .titulo div {
+        margin-right: 0; 
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem; 
+    }
+
+    .certificado_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px;
+    }
+
+    .item-certificado {
+        width: 90%; 
+        max-width: 350px; 
+        height: 250px; 
+        margin-bottom: 20px; 
+    }
+
+
+    .frente, .tras {
+        width: 100%; 
+        height: 100%;
+        left: 0; 
+        top: 0;
+    }
+
+    .frente img {
+        object-fit: cover;
+    }
+    
+    .tras {
+        padding: 20px; 
+    }
 
 
 }
@@ -238,7 +274,7 @@
     .frente, .tras {
         width: 100%; 
         height: 100%;
-        left: 0; /* Garante que comece no canto esquerdo do pai */
+        left: 0; 
         top: 0;
     }
 
@@ -247,7 +283,7 @@
     }
     
     .tras {
-        padding: 20px; /* Evita que o texto encoste nas bordas */
+        padding: 20px; 
     }
 
 }
