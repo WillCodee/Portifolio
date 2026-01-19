@@ -135,7 +135,7 @@
     color: var(--main-color);
 }
 
-.tras p, .tras ul {
+.tras p{
     font-size: 1.5rem;
     list-style: none;
     padding: 0;
@@ -148,6 +148,10 @@
 .button-link{
     margin-top: 10%;
 }
+
+.info p::after{
+        content: "Passe o mouse para ver os detalhes";
+    }
 
     @media(min-width:3000px){
         .logo-certificado img{
@@ -162,9 +166,15 @@
             font-size: 5rem;
         }
 
+        .info p::after{
+        content: "Passe o mouse para ver os detalhes";
+        }
 
     }
 
+.item-certificado.active .flip {
+    transform: rotateY(180deg);
+}
 
 @media (max-width: 990px){
 
@@ -193,6 +203,14 @@
         flex-direction: column;
         align-items: center; 
         padding: 10px;
+    }
+
+    .item-certificado{
+        cursor: pointer;
+    }
+
+    .info p::after{
+        content: "Passe o mouse para ver os detalhes";
     }
 
 }
@@ -228,7 +246,7 @@
     }
 
     .item-certificado {
-        width: 90%; 
+        width: 100%; 
         max-width: 350px; 
         height: 250px; 
         margin-bottom: 20px; 
@@ -250,6 +268,20 @@
         padding: 20px; 
     }
 
+    .tras h4{
+        font-size: 1.8rem;
+    }
+    .tras p{
+        font-size: 1.3rem;
+    }
+
+    .item-certificado{
+        cursor: pointer;
+    }
+
+    .info p::after{
+        content: "Clique para ver os detalhes";
+    }
 
 }
 
@@ -283,26 +315,39 @@
     }
 
     .item-certificado {
-        width: 90%; 
+        width: 100%; 
         max-width: 350px; 
         height: 250px; 
         margin-bottom: 20px; 
     }
 
+    .item-certificado{
+        cursor: pointer;
+    }
 
     .frente, .tras {
-        width: 110%; 
-        height: 110%;
+        width: 100%; 
+        height: 100%;
         left: 0; 
         top: 0;
     }
 
+    .tras h4{
+        font-size: 1.5rem;
+    }
+    .tras p{
+        font-size: 1.2rem;
+    }
     .frente img {
         object-fit: cover;
     }
     
     .tras {
         padding: 20px; 
+    }
+
+    .info p::after{
+        content: "Clique para ver os detalhes";
     }
 
 }

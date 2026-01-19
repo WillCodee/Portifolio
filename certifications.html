@@ -28,7 +28,7 @@
     <section class="certificados">
 
         <div class="info">
-            <p>Clique para ver os detalhes</p>
+            <p></p>
         </div>
 
         <div class="certificado_area">
@@ -193,4 +193,18 @@
 
 
 </body>
+<script>
+    //Efeito de clique para mobile
+    const certificados = document.getelementById('.item-certificado')
+
+    certificados.forEach(card =>{
+        card.addEventListener('click',function(){
+
+            //Vira novamente um certificado para seu estado original
+            certificados.forEach(c => {if(c != card) c.classList.remove('active')})
+            this.classList.toggle('active')
+        })
+    })
+</script>
+
 </html>
