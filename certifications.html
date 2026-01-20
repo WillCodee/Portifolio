@@ -22,6 +22,21 @@
         <div>
             <h1>Certificados</h1>
         </div>
+
+          <!-- Checkbox invisível que controlará o menu -->
+    <input type="checkbox" id="menu-toggle">
+    
+    <!-- Label que servirá como botão do menu hamburger -->
+    <label for="menu-toggle" class="menu-btn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </label>
+
+
+        <nav class="menu">
+            <a href="index.html"></a>
+        </nav>
         
     </header>
 
@@ -194,17 +209,24 @@
 
 </body>
 <script>
-    //Efeito de clique para mobile
-    const certificados = document.getelementById('.item-certificado')
+   //Script para efeito de clique ao virar e desvirar
+   const certificados = document.querySelectorAll('.item-certificado')
 
-    certificados.forEach(card =>{
-        card.addEventListener('click',function(){
+   certificados.forEach(card => {
+    card.addEventListener('click',function(e){
+        e.stopPropagation() // o efeito de clique não interfere em outros elementos
 
-            //Vira novamente um certificado para seu estado original
-            certificados.forEach(c => {if(c != card) c.classList.remove('active')})
-            this.classList.toggle('active')
+        certificados.forEach( c =>{
+            if (c !== card) c.classList.remove('active')
         })
+
+        this.classList.toggle('active')
     })
+   })
+
+   document.addEventListener('click', () => {
+    certificados.forEach(c => c.classList.remove('active'))
+   })
 </script>
 
 </html>

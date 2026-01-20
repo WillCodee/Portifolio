@@ -196,6 +196,24 @@
                 </div>
             </div>
 
+            <div class="row" id="skillsContainer">
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="skillsContainer">
+                <div class="bar">
+                    <div class="info">                   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -208,7 +226,7 @@
                 <input type="tel" name="tel" placeholder="Número de Telefone" required>
                 <input type="text" name="menssagem" placeholder="Assunto">
                 <textarea name="menssagem" id="" cols="30" rows="10" placeholder="Digite sua Mensagem"></textarea>
-                <input type="hidden" name="_next" value="https://willcodee.github.io/Portifolio/obrigado.html">
+                <input type="hidden" name="_next" value="https://portifolio-william-lago.vercel.app/obrigado.html">
                 <input type="hidden" name="autoresponse" value="Sua Mensagem foi enviada com sucesso! Em Breve entrarei em Contato">
                 <input type="hidden" name="_template" value="box">
                 <input type="submit" value="Envie Mensagem" class="btn">
@@ -234,11 +252,25 @@
 
 </body>
 <script>
+    //script do menu toggle de fechamento
     document.querySelectorAll('.menu a').forEach(link => { /*faz iteração sobre os cliques*/
         link.addEventListener('click', () => { /*espera ouvir os cliques*/
             document.getElementById('menu-toggle').checked = false;
             /*encontra os chekbox do menu e depois fecha*/
         });
     });
+
+    //script para efeito de video ao tocar
+   const videos = document.querySelectorAll('video')
+
+   videos.forEach(videoAtual => {
+    videoAtual.addEventListener('play',function(){
+        videos.forEach(outroVideo => {
+            if(outroVideo !== videoAtual){
+                outroVideo.pause()
+            }
+        })
+    })
+   })
     </script>
 </html>
