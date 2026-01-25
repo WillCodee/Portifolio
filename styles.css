@@ -364,18 +364,6 @@ span{
     transition: transform 0.3s ease;
 }
 
-.border-certificates img{
-    position: relative;
-    width: 30vw;
-    box-shadow: 0 0 25px var(--main-color);
-    border: 2px solid #fff; 
-}
-
-.border-certificates:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 25px var(--main-color)); 
-}
-
 .button-link{
     display: flex;
     align-items: center;
@@ -410,6 +398,116 @@ span{
 
 .button-link a:hover{
     transform: scale(1.2);
+}
+
+/* Slider */
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: 550px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+    
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* navegação */
+.manual-navigation,
+.navigation-auto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){ /* não seleciona o último filho do elemento pai*/
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~.first{ /*Seleciona o irmão no mesmo do DOM que aparece depois dele*/
+    margin-left: 0;
+}
+
+#radio2:checked ~.first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~.first{
+    margin-left: -50%;
+}
+
+.navigation-auto div{
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 490px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #fff;
 }
 
 /* Habilidades */
@@ -752,7 +850,7 @@ span{
     
     .logo img {
         /* width: 200px; */
-        width: 10%; /* Diminui a logo */
+        width: 70%; /* Diminui a logo */
         margin-bottom: 50px; /* Adiciona margin-bottom */
         max-width:20%;
     }
@@ -819,21 +917,63 @@ span{
     .social-icon {
         justify-content: center;
     }
+
+    .about .container-sobre {
+        width: 100%;
+        padding: 2rem;
+        height: 100%;
+    }
     
-    /* .projects-container {
-        grid-template-columns: 1fr;
+        .slider{
+            max-width: 100%;
+            height: auto;
+            padding-bottom: 60px;
+        }
+
+    .slides {
+        height: auto; 
     }
 
-    .project-video{
-    text-align: center; 
-    margin-bottom: -70%;
+    .slide {
+        height: auto; 
     }
 
-    video{
-        width: 200px;
-        height: 200px;
-        
-    } */
+    .slide img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .manual-navigation, 
+    .navigation-auto {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+
+    .manual-navigation {
+        margin-top: -13%;
+    }
+
+    .navigation-auto {
+       margin-top: 52%;
+    }
+
+    
+    .manual-btn, .navigation-auto div {
+        padding: 8px;
+    }
+
+    .manual-btn:not(:last-child), 
+    .navigation-auto div:not(:last-child) {
+        margin-right: 15px; 
+    }
+
     
 
     .skills .container {
@@ -911,7 +1051,59 @@ span{
     }
 
 
-    /**/
+    /*slicers for certificates*/
+
+
+    .slider{
+        position: relative;
+    }
+
+    .slide{
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide img{
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .manual-navigation{
+        margin-top: 20px;
+    }
+
+    .manual-btn,
+    .navigation-auto div{
+        padding: 4px;
+    }
+
+    .manual-btn:not(:last-child),
+    .navigation-auto div.manual-btn:not(:last-child){
+        margin-right: 15px;
+    }
+
+    .manual-navigation{
+        bottom: 160px; 
+    }
+    .navigation-auto{
+        margin-top: 300px;
+    }
+
+    .navigation-auto div{
+        padding: 4px;
+        margin-right: 50%;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 10px;
+    }
+
+
+
+    /* skills */
     .skills .container .row{
         grid-template-columns: repeat(1,1fr);
         padding: auto;
@@ -921,19 +1113,14 @@ span{
         align-items: center;
     }
 
-
-    .border-certificates img{
-        width: 65vw;
-    }
-
-    .border-certificates:hover{
-        transform: scale(1.1);
-    }
-
     .button-link a{
         padding: 24px 48px;
         font-size: 20px;
     }
+
+     .button-link{
+        margin-top: -40%;
+    } 
     
     .info img {
         width: 80px;

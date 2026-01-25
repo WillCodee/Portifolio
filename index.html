@@ -127,8 +127,50 @@
     <section class="certificates" id="certificates">
         <h2 class="heading">Certificados</h2>
 
-            <div class="border-certificates">
-                <img src="images/Diploma Técnico.jpeg" title="Certificado Técnico em Desenvolvimento de Sistemas - SENAI">
+            <div class="slider">
+                <div class="slides">
+                    <!-- Radio Buttons -->
+                     <input type="radio" name="radio-btn" id="radio1">
+                     <input type="radio" name="radio-btn" id="radio2">
+                     <input type="radio" name="radio-btn" id="radio3">
+                     <!-- Fim Radio Button -->
+
+                     <!-- Slide Certificados -->
+                      <div class="slide first">
+                        <div class="border-certificates">
+                            <img src="images/Diploma Técnico.jpeg" title="Certificado Técnico em Desenvolvimento de Sistemas - SENAI">
+                        </div>
+                      </div>
+
+                      <div class="slide">
+                        <div class="border-certificates">
+                            <img src="images/Certificado Imersão Dev.png" title="Imersão Dev Google - Alura">
+                        </div>
+                      </div>
+
+                      <div class="slide">
+                        <div class="border-certificates">
+                            <img src="images/Fundamentos do Python 1.jpeg" title="Fundamentos do Python - Cisco">
+                        </div>
+                      </div>
+                       <!-- Fim Slide Certificados -->
+
+                       <!-- Navigation auto -->
+                      <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                      </div>
+
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+
+
             </div>
 
 
@@ -249,28 +291,6 @@
     </footer>
 
     
-
+<script src="script.js"></script>
 </body>
-<script>
-    //script do menu toggle de fechamento
-    document.querySelectorAll('.menu a').forEach(link => { /*faz iteração sobre os cliques*/
-        link.addEventListener('click', () => { /*espera ouvir os cliques*/
-            document.getElementById('menu-toggle').checked = false;
-            /*encontra os chekbox do menu e depois fecha*/
-        });
-    });
-
-    //script para efeito de video ao tocar
-   const videos = document.querySelectorAll('video')
-
-   videos.forEach(videoAtual => {
-    videoAtual.addEventListener('play',function(){
-        videos.forEach(outroVideo => {
-            if(outroVideo !== videoAtual){
-                outroVideo.pause()
-            }
-        })
-    })
-   })
-    </script>
 </html>
