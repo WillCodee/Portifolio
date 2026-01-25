@@ -1086,15 +1086,15 @@ span{
     }
 
     .manual-navigation{
-        bottom: 160px; 
+        bottom: 90px; 
     }
     .navigation-auto{
-        margin-top: 300px;
+        margin-top: 220px;
     }
 
     .navigation-auto div{
         padding: 4px;
-        margin-right: 50%;
+        margin-right: 0%;
     }
 
     .navigation-auto div:not(:last-child){
@@ -1119,7 +1119,7 @@ span{
     }
 
      .button-link{
-        margin-top: -40%;
+        margin-top: 10%;
     } 
     
     .info img {
