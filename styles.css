@@ -785,23 +785,93 @@ span{
         font-size: 70%;
     }
     
+      /* Ajustes no header e logo */
     .header {
-        padding: 2rem 5%;
+        padding: 1.5rem 5%;
+    }
+
+    
+    /* Ajustes no menu hamburger */
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        right: 5%; /* Posiciona mais próximo da borda */
+        top: 1.8rem; /* Alinha verticalmente com a logo */
     }
     
-    .home {
-        gap: 4rem;
+    /* Quando o checkbox estiver marcado, mostrar o menu */
+    #menu-toggle:checked ~ .menu {
+        left: 0;
     }
     
-    .home .home-content h1 {
-        font-size: 3rem;
-        padding-top: 20px;
+    /* Transformar hamburger em X quando menu aberto */
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    
+    .logo img {
+        /* width: 200px; */
+        width: 70%; /* Diminui a logo */
+        margin-bottom: 50px; /* Adiciona margin-bottom */
+        max-width:20%;
+    }
+    
+    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
+    .home-content h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 25px;
     }
     
     .home-content h3 {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
     }
     
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+
+    #menu-icon {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+        transition: .3s ease;
+        padding-top: 80px; /* Espaço para o header */
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu a {
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+
+
     .about .container-sobre {
         width: 90%;
         height: auto;
@@ -810,6 +880,45 @@ span{
      .border-certificates img{
             width: 100%;
         }
+
+     .slide{
+       height: 200px;
+    }
+
+    .manual-navigation{
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .manual-btn{
+        padding: 3px;
+    }
+
+    .manual-btn:not(:last-child){
+        margin-right: 10px;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .navigation-auto div{
+        padding: 3px;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 10px;
+    }
+
 }
 
 /* Responsividade para tablets e celulares grandes */
@@ -924,54 +1033,45 @@ span{
         height: 100%;
     }
     
-        .slider{
-            max-width: 100%;
-            height: auto;
-            padding-bottom: 60px;
-        }
+    /*slicers for certificates*/
 
-    .slides {
-        height: auto; 
+
+    .slide{
+       height: 200px;
     }
 
-    .slide {
-        height: auto; 
-    }
-
-    .slide img{
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .manual-navigation, 
-    .navigation-auto {
-        width: 100%;
+    .manual-navigation{
         position: absolute;
-        left: 0;
+        width: 100%;
+        bottom: 20px;
         display: flex;
         justify-content: center;
         margin-top: 0;
     }
 
-
-    .manual-navigation {
-        margin-top: -13%;
+    .manual-btn{
+        padding: 3px;
     }
 
-    .navigation-auto {
-       margin-top: 52%;
+    .manual-btn:not(:last-child){
+        margin-right: 10px;
     }
 
-    
-    .manual-btn, .navigation-auto div {
-        padding: 8px;
+    .navigation-auto{
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
     }
 
-    .manual-btn:not(:last-child), 
-    .navigation-auto div:not(:last-child) {
-        margin-right: 15px; 
+    .navigation-auto div{
+        padding: 3px;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 10px;
     }
 
     
@@ -1054,47 +1154,38 @@ span{
     /*slicers for certificates*/
 
 
-    .slider{
-        position: relative;
-    }
-
     .slide{
-        height: 260px;
+       height: 200px;
+    }
+
+    .manual-navigation{
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
         display: flex;
-        align-items: center;
         justify-content: center;
+        margin-top: 0;
     }
 
-    .slide img{
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: contain;
+    .manual-btn{
+        padding: 3px;
     }
 
-    .manual-navigation{
-        margin-top: 20px;
+    .manual-btn:not(:last-child){
+        margin-right: 10px;
     }
 
-    .manual-btn,
-    .navigation-auto div{
-        padding: 4px;
-    }
-
-    .manual-btn:not(:last-child),
-    .navigation-auto div.manual-btn:not(:last-child){
-        margin-right: 15px;
-    }
-
-    .manual-navigation{
-        bottom: 90px; 
-    }
     .navigation-auto{
-        margin-top: 220px;
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
     }
 
     .navigation-auto div{
-        padding: 4px;
-        margin-right: 0%;
+        padding: 3px;
     }
 
     .navigation-auto div:not(:last-child){
