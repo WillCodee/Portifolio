@@ -433,38 +433,6 @@ span{
     object-fit: cover;
 }
 
-/* navegação */
-.manual-navigation,
-.navigation-auto{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-}
-
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: 90px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn{
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child){ /* não seleciona o último filho do elemento pai*/
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background-color: #fff;
-}
 
 #radio1:checked ~.first{ /*Seleciona o irmão no mesmo do DOM que aparece depois dele*/
     margin-left: 0;
@@ -478,35 +446,16 @@ span{
     margin-left: -50%;
 }
 
-.navigation-auto div{
-    border: 2px solid var(--main-color);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
 
-.navigation-auto{
-    position: absolute;
-    width: 800px;
-    margin-top: 490px;
-    display: flex;
-    justify-content: center;
-}
-
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~.navigation-auto .auto-btn1{
+#radio1:checked ~ .auto-btn1{
     background-color: #fff;
 }
 
-#radio2:checked ~.navigation-auto .auto-btn2{
+#radio2:checked ~ .auto-btn2{
     background-color: #fff;
 }
 
-#radio3:checked ~.navigation-auto .auto-btn3{
+#radio3:checked ~ .auto-btn3{
     background-color: #fff;
 }
 
@@ -726,9 +675,6 @@ span{
         overflow: hidden;
         }
 
-        /* .paragrafo-projects{
-            margin-top: 30%;
-        } */
     }
 
 
@@ -739,11 +685,6 @@ span{
         font-size: 75%;
     }
 
-    /* .paragrafo-projects{
-            margin-top: 30%;
-    } */
-    
-
     
 }
 
@@ -752,16 +693,6 @@ span{
         margin-top: 30%;
     }
 
-        /* .paragrafo-projects{
-            margin-top: 30%;
-        }
-        .projects-box{
-            height: 80%;
-            
-        }
-        .projects-info {
-            height: 140%;
-        } */
 }
 
 @media(min-width: 1300px){  
@@ -785,6 +716,24 @@ span{
         font-size: 70%;
     }
     
+    
+    .about .container-sobre {
+        width: 90%;
+        height: auto;
+    }
+
+     .border-certificates img{
+            width: 100%;
+        }
+
+     .slide{
+       height: 200px;
+    }
+
+
+}
+
+@media (max-width: 990px){
       /* Ajustes no header e logo */
     .header {
         padding: 1.5rem 5%;
@@ -869,54 +818,6 @@ span{
         display: block;
         margin: 1.5rem 0;
         font-size: 2rem;
-    }
-
-
-    .about .container-sobre {
-        width: 90%;
-        height: auto;
-    }
-
-     .border-certificates img{
-            width: 100%;
-        }
-
-     .slide{
-       height: 200px;
-    }
-
-    .manual-navigation{
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .manual-btn{
-        padding: 3px;
-    }
-
-    .manual-btn:not(:last-child){
-        margin-right: 10px;
-    }
-
-    .navigation-auto{
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .navigation-auto div{
-        padding: 3px;
-    }
-
-    .navigation-auto div:not(:last-child){
-        margin-right: 10px;
     }
 
 }
@@ -1039,41 +940,6 @@ span{
     .slide{
        height: 200px;
     }
-
-    .manual-navigation{
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .manual-btn{
-        padding: 3px;
-    }
-
-    .manual-btn:not(:last-child){
-        margin-right: 10px;
-    }
-
-    .navigation-auto{
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .navigation-auto div{
-        padding: 3px;
-    }
-
-    .navigation-auto div:not(:last-child){
-        margin-right: 10px;
-    }
-
     
 
     .skills .container {
@@ -1165,31 +1031,6 @@ span{
         display: flex;
         justify-content: center;
         margin-top: 0;
-    }
-
-    .manual-btn{
-        padding: 3px;
-    }
-
-    .manual-btn:not(:last-child){
-        margin-right: 10px;
-    }
-
-    .navigation-auto{
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .navigation-auto div{
-        padding: 3px;
-    }
-
-    .navigation-auto div:not(:last-child){
-        margin-right: 10px;
     }
 
 
