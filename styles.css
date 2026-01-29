@@ -711,41 +711,20 @@ span{
 
 }
 
-@media (min-width: 790px) {
-    html {
-        font-size: 70%;
-    }
-    
-    
-    .about .container-sobre {
-        width: 90%;
-        height: auto;
-    }
 
-     .border-certificates img{
-            width: 100%;
-        }
-
-     .slide{
-       height: 200px;
-    }
-
-
-}
 
 @media (max-width: 990px){
-      /* Ajustes no header e logo */
     .header {
         padding: 1.5rem 5%;
     }
 
     
-    /* Ajustes no menu hamburger */
+
     .menu-btn {
         display: flex;
         position: absolute;
-        right: 5%; /* Posiciona mais próximo da borda */
-        top: 1.8rem; /* Alinha verticalmente com a logo */
+        right: 5%; 
+        top: 1.8rem; 
     }
     
     /* Quando o checkbox estiver marcado, mostrar o menu */
@@ -768,13 +747,12 @@ span{
     
     
     .logo img {
-        /* width: 200px; */
-        width: 70%; /* Diminui a logo */
-        margin-bottom: 50px; /* Adiciona margin-bottom */
+        width: 70%; 
+        margin-bottom: 50px; 
         max-width:20%;
     }
     
-    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
+    
     .home-content h1 {
         font-size: 1rem;
         line-height: 1.2;
@@ -807,7 +785,7 @@ span{
         align-items: center;
         padding: 3rem 0;
         transition: .3s ease;
-        padding-top: 80px; /* Espaço para o header */
+        padding-top: 80px; 
     }
     
     .menu.active {
@@ -822,50 +800,27 @@ span{
 
 }
 
-/* Responsividade para tablets e celulares grandes */
-@media (max-width: 768px) {
-
-      /* Ajustes no header e logo */
-    .header {
+@media (max-width: 790px) {
+     .header {
         padding: 1.5rem 5%;
     }
 
     
-    /* Ajustes no menu hamburger */
+    
     .menu-btn {
         display: flex;
         position: absolute;
-        right: 5%; /* Posiciona mais próximo da borda */
-        top: 1.8rem; /* Alinha verticalmente com a logo */
+        right: 5%; 
+        top: 1.8rem; 
     }
-    
-    /* Quando o checkbox estiver marcado, mostrar o menu */
-    #menu-toggle:checked ~ .menu {
-        left: 0;
-    }
-    
-    /* Transformar hamburger em X quando menu aberto */
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    
-    
-    .logo img {
-        /* width: 200px; */
-        width: 70%; /* Diminui a logo */
-        margin-bottom: 50px; /* Adiciona margin-bottom */
+
+     .logo img {
+        width: 70%; 
+        margin-bottom: 50px; 
         max-width:20%;
     }
     
-    /* Ajuste no texto "Sou um Desenvolvedor full-stack" */
+    
     .home-content h1 {
         font-size: 1rem;
         line-height: 1.2;
@@ -898,7 +853,7 @@ span{
         align-items: center;
         padding: 3rem 0;
         transition: .3s ease;
-        padding-top: 80px; /* Espaço para o header */
+        padding-top: 80px; 
     }
     
     .menu.active {
@@ -911,14 +866,138 @@ span{
         font-size: 2rem;
     }
     
-    /* Ajuste no conteúdo principal para evitar sobreposição */
+    
     .home {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 8rem;
     }
     
-    /* Ajuste na imagem do perfil */
+    
+    .home-img img {
+        width: 50vw;
+        margin-top: 2rem;
+    }
+    
+    .social-icon {
+        justify-content: center;
+    }
+
+    .about .container-sobre {
+        width: 100%;
+        padding: 2rem;
+        height: 100%;
+    }
+    
+    /*slicers for certificates*/
+
+
+    .slide{
+       height: 200px;
+    }
+    
+
+    .skills .container {
+        grid-template-columns: repeat(1, 1fr);
+    }    
+
+}
+
+/* Responsividade para tablets e celulares grandes */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 1.5rem 5%;
+    }
+
+    
+    
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        right: 5%; 
+        top: 1.8rem; 
+    }
+    
+    /* Quando o checkbox estiver marcado, mostrar o menu */
+    #menu-toggle:checked ~ .menu {
+        left: 0;
+    }
+    
+    /* Transformar hamburger em X quando menu aberto */
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    
+    .logo img {
+        width: 70%; 
+        margin-bottom: 50px; 
+        max-width:20%;
+    }
+    
+    
+    .home-content h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 25px;
+    }
+    
+    .home-content h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+
+    #menu-icon {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+        transition: .3s ease;
+        padding-top: 80px; 
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu a {
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+    
+    
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 8rem;
+    }
+    
+    
     .home-img img {
         width: 50vw;
         margin-top: 2rem;
