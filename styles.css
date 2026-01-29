@@ -265,7 +265,7 @@ span{
     padding: 1rem; 
     width: 900px; 
     height: 550px;
-    text-align: center; 
+    text-align: center;
     box-shadow: 0 4px 10px rgba(32, 103, 211, 0.3); 
     margin: 0 auto; 
     overflow: hidden;
@@ -283,6 +283,8 @@ span{
     font-weight: 400;
     margin: auto; 
     text-align: justify;
+    justify-content: center;
+    align-items: center;
     max-width: 80%;
     margin-top: 40px;
     line-height: 1.2; /* Espaçamento entre linhas */
